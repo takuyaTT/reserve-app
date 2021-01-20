@@ -1,0 +1,34 @@
+<!-- 背景色を変更する場合は下記のclassに　bg-〇〇〇　を追加する -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+  <div class="container">
+      <div class="navbar-translate">
+          <a class="navbar-brand" [routerLink]="['/']">RESERVATION</a>
+          <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+              <span class="navbar-toggler-bar"></span>
+              <span class="navbar-toggler-bar"></span>
+              <span class="navbar-toggler-bar"></span>
+          </button>
+      </div>
+      <div class="navbar-collapse" id="navbarToggler">
+        <ng-container *ngIf="auth.isAuthenticated()">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a (click)="logout()"  class="nav-link"><i class="nc-icon nc-book-bookmark"></i> ログアウト</a>
+            </li>
+          </ul>
+        </ng-container>
+
+        <ng-container *ngIf="!auth.isAuthenticated()">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a [routerLink]="['/login']"  class="nav-link"><i class="nc-icon nc-book-bookmark"></i> ログイン</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/register']" class="btn btn-danger btn-round">新規会員登録</a>
+            </li>            
+          </ul>
+        </ng-container>
+          
+      </div>
+  </div>
+</nav>
