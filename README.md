@@ -30,8 +30,8 @@ Angular CLI: 11.0.5
 
 ## 実行確認方法(ローカル)
 1. npm installを実行  
-2. serverディレクトリに**config/dev.js**を作成
-3. dev.jsにMongoDBの**URI、SECRET(ハッシュ)**を設定
-4. ルートディレクトリで**npm run start-dev**を実行
-5. serverディレクトリで**node index.js**を実行
+2. serverディレクトリに **config/dev.js** を作成
+3. dev.jsにMongoDBの **URIとSECRET(ハッシュ)** を指定
+4. ルートディレクトリで **npm run start-dev** を実行
+5. serverディレクトリで **node index.js** を実行
 6. localhost:4200でアクセス
