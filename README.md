@@ -1,27 +1,37 @@
-# ReserveApp
+# reserve-app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+## 開発環境
+### PC
+MacBook Pro M1
 
-## Development server
+### フロントエンド
+Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### バックエンド
+Node.js
 
-## Code scaffolding
+### DB
+MongoDB
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## バージョン
+* Angular
+Angular CLI: 11.0.5  
+@angular-devkit/architect:0.1100.5 (cli-only)  
+@angular-devkit/core:11.0.5 (cli-only)  
+@angular-devkit/schematics:11.0.5 (cli-only)  
+@schematics/angular:11.0.5 (cli-only)  
+@schematics/update:0.1100.5 (cli-only)  
 
-## Build
+* node  
+14.15.3  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* npm  
+6.14.9
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 実行確認方法(ローカル)
+1. npm installを実行  
+2. serverディレクトリに**config/dev.js**を作成
+3. dev.jsにMongoDBの**URI**と**SECRET(ハッシュ)**を設定
+4. ルートディレクトリで**npm run start-dev**を実行
+5. serverディレクトリで**node index.js**を実行
+6. localhost:4200でアクセス
